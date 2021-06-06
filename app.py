@@ -12,6 +12,6 @@ def testing():
 def progress():
     data = float(request.args.get('value'))
     if data => 20:
-        return flag = "1"
+        return "1"
     else:
         return "0"
