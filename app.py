@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request
+from flask import request,Response 
 
 app = Flask(__name__)
 
@@ -8,10 +8,11 @@ app = Flask(__name__)
 def testing():
     return 'test'
 
-@app.route('/datatrans', methods = ['POST', 'GET'])
-def dattransfer():
-    data = float(requests.args.get('value'))
-    if data > 10:
-        return '1'
+@myapp.route("/test",methods=['POST', 'GET'])
+def progress():
+    data = float(request.args.get('value'))
+    if data => 20:
+        flag = 1
     else:
-        return '0'
+        flag = 0
+    return flag
