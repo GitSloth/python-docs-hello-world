@@ -4,7 +4,7 @@ from flask import request,Response
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def testing():
-    return 'test'
+    return "test"
 
