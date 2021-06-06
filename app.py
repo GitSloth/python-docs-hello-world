@@ -15,4 +15,4 @@ def progress():
         flag += "1"
     else:
         flag += "0"
-    return jsonify(flag)
+    return flag
