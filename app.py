@@ -8,7 +8,7 @@ app = Flask(__name__)
 def testing():
     return "test"
 
-@app.route("/test",methods=['POST', 'GET'])
+@app.route("/testrun",methods=['POST', 'GET'])
 def progress():
     data = float(request.args.get('value'))
     if data > 20:
