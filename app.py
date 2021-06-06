@@ -11,8 +11,8 @@ def testing():
 route("/test",methods=['POST', 'GET'])
 def progress():
     data = float(request.args.get('value'))
-    if data => 20:
+    if data >= 20:
         flag = "1"
     else:
-        flag = "2"
+        flag = "0"
     return flag
