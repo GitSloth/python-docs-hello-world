@@ -4,6 +4,8 @@ from flask import request
 app = Flask(__name__)
 
 
+ledFlag = 0 
+
 @app.route('/postjson', methods = ['POST'])
 def postJsonHandler():
     content = request.get_json()
@@ -15,3 +17,7 @@ def postJsonHandler():
 def testrunner():
     return 'please receive this'
 
+
+@app.rout('/ledFlag')
+def giveLEDFlag():
+    return ledFlag
