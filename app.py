@@ -8,11 +8,10 @@ app = Flask(__name__)
 def testing():
     return 'test'
 
-@myapp.route("/test",methods=['POST', 'GET'])
+@app.route("/test",methods=['POST', 'GET'])
 def progress():
     data = float(request.args.get('value'))
     if data => 20:
-        flag = 1
+        return flag = 1
     else:
-        flag = 0
-    return flag
+        return flag = 0
