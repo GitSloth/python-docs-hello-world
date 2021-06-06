@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request,Response 
+from flask import request,jsonify,Response 
 
 app = Flask(__name__)
 
@@ -11,8 +11,8 @@ def testing():
 @app.route("/test",methods=['POST', 'GET'])
 def progress():
     data = float(request.args.get('value'))
-    if data >= 20:
-        flag = "1"
+    if data > 20:
+        flag += "1"
     else:
-        flag = "0"
-    return flag
+        flag += "0"
+    return jsonify(flag)
