@@ -23,10 +23,3 @@ def testrunner():
 def giveLEDFlag():
     return ledFlag
 
-@app.route('/getinfo', methods = ['POST','GET'])
-def receiving():
-    data = float(request.args.get('irdata'))
-    if irdata > 10:
-        ledFlag = 0
-    else:
-        ledFlag = 1
