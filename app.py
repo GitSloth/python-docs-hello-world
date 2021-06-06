@@ -4,21 +4,14 @@ from flask import request
 app = Flask(__name__)
 
 
-ledFlag = 0 
+@app.route('/')
+def testing():
+    return 'test'
 
-
-@app.route('/postjson', methods = ['POST'])
-def postJsonHandler():
-    content = request.get_json()
-    print(content)
-    return 'JSON posted'
-
-@app.route('/testrun')
-def testrunner():
-    return 'please receive this'
-
-
-@app.rout('/ledflag')
-def giveLEDFlag():
-    return ledFlag
-
+@app.route('/datatrans', methods = ['POST', 'GET'])
+def dattransfer():
+    data = float(requests.args.get('value'))
+    if data > 10:
+        return '1'
+    else:
+        return '0'
