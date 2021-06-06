@@ -15,4 +15,4 @@ def progress():
         flag = "true"
     else:
         flag = "false"
-    return flag
+    return flag, 200
